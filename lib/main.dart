@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'components/BottomNavigationBar.dart';
+import 'ninjaId/NinjaCard.dart';
+
+
+void main(){
+  runApp(MaterialApp(
+    home: NinjaCard(),
+  ));
+}
+
 
 // void main(){
 //   runApp(MyApp());
 // }
 
-void main(){
-  runApp(BottomNavigationBarExampleApp());
-}
+// void main(){
+//   runApp(BottomNavigationBarExampleApp());
+// }
 
 // void main() {
 //   runApp(
