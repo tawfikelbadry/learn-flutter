@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/model/Ninja.dart';
 
 class NinjaCard extends StatelessWidget {
-  const NinjaCard({super.key});
+  Ninja ninja = Ninja(
+    name: "Tawfik Elbadry",
+    level: 9,
+    email: "tawfeeq.elbadry@gmail.com",
+    village: "木ノ葉",
+    ninjaStyle: "Fire",
+  );
+
+  NinjaCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +44,7 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Tawfik Elbadry",
+              ninja.name,
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -51,7 +60,7 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "8",
+              ninja.level.toString(),
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -67,7 +76,7 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "木ノ葉",
+              ninja.village,
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -83,7 +92,7 @@ class NinjaCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Fire",
+              ninja.ninjaStyle,
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -97,10 +106,7 @@ class NinjaCard extends StatelessWidget {
               children: <Widget>[
                 Icon(Icons.email, color: Colors.grey[400]),
                 SizedBox(width: 10),
-                Text(
-                  "tawfeeq.elbadry@gmail.com",
-                  style: TextStyle(color: Colors.grey[400]),
-                ),
+                Text(ninja.email, style: TextStyle(color: Colors.grey[400])),
               ],
             ),
           ],

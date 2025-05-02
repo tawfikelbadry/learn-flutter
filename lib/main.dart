@@ -6,6 +6,9 @@ import 'ninjaId/NinjaCard.dart';
 void main(){
   runApp(MaterialApp(
     home: NinjaCard(),
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent)
+    ),
   ));
 }
 
