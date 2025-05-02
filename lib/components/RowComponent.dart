@@ -9,28 +9,37 @@ class RowComponent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        ContainerItem1(text: "four", backgroundColor: Colors.indigo),
-        TextButton(
-          onPressed: () {},
-          style: TextButton.styleFrom(
-            backgroundColor: Colors.deepPurple,
-            minimumSize: Size(88, 36),
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(2)),
-            ),
-          ),
-          child: const Text("hep"),
+        Expanded(
+          flex: 1,
+          child: ContainerItem1(text: "four", backgroundColor: Colors.indigo),
         ),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          color: Colors.blueAccent,
-          child: Text(
-            "My Container",
-            style: TextStyle(
-              backgroundColor: Colors.lightGreen,
-              fontSize: 20,
-              color: Colors.deepOrange,
+        Expanded(
+          flex: 1,
+          child: TextButton(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.deepPurple,
+              minimumSize: Size(88, 36),
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(2)),
+              ),
+            ),
+            child: const Text("hep"),
+          ),
+        ),
+        Expanded(
+          flex: 2,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            color: Colors.blueAccent,
+            child: Text(
+              "My Container",
+              style: TextStyle(
+                backgroundColor: Colors.lightGreen,
+                fontSize: 20,
+                color: Colors.deepOrange,
+              ),
             ),
           ),
         ),
@@ -51,7 +60,7 @@ class ColumnComponent extends StatelessWidget {
         ContainerItem1(text: "One", backgroundColor: Colors.amberAccent),
         ContainerItem1(text: "Two", backgroundColor: Colors.blueAccent),
         ContainerItem1(text: "Three", backgroundColor: Colors.purpleAccent),
-        RowComponent()
+        RowComponent(),
       ],
     );
   }
